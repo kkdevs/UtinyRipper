@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace UtinyRipper.BundleFiles
 {
-	internal sealed class BundleHeader
+	public sealed class BundleHeader
 	{
 		public static BundleType ParseSignature(string signature)
 		{

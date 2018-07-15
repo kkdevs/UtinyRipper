@@ -4,7 +4,7 @@ using UtinyRipper.SerializedFiles;
 
 namespace UtinyRipper.BundleFiles
 {
-	internal class BundleFileEntry : FileEntry
+	public class BundleFileEntry : FileEntry
 	{
 		public BundleFileEntry(Stream stream, string filePath, string name, long offset, long size):
 			base(stream, name, offset, size)

@@ -4,7 +4,7 @@
 	/// Contains compression information about chunk
 	/// Chunk is a structure (optionaly LZMA compressed) that contains file entries and data blob
 	/// </summary>
-	internal struct ChunkInfo : IEndianReadable
+	public struct ChunkInfo : IEndianReadable
 	{
 		public void Read(EndianStream stream)
 		{

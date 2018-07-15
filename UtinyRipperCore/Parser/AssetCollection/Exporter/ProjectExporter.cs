@@ -152,6 +152,8 @@ namespace UtinyRipper.AssetExporters
 			foreach (IExportCollection collection in collections)
 			{
 				container.CurrentCollection = collection;
+				if (!collection.Name.Contains("AnimationClip") && !collection.Name.Contains("Avatar"))
+					continue;
 				bool isExported = collection.Export(container, path);
 				if (isExported)
 				{

@@ -3,7 +3,7 @@ using System.IO;
 
 namespace UtinyRipper
 {
-	internal abstract class FileEntry
+	public abstract class FileEntry
 	{
 		protected FileEntry(Stream stream, string name, long offset, long size)
 		{

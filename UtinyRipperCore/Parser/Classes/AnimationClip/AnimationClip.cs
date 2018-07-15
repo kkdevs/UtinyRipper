@@ -124,19 +124,19 @@ namespace UtinyRipper.Classes
 		/// <summary>
 		/// 2.6.0 and greater
 		/// </summary>
-		private static bool IsAlignCompressed(Version version)
+		public static bool IsAlignCompressed(Version version)
 		{
 			return version.IsGreaterEqual(2, 6);
 		}
 		/// <summary>
 		/// 2017.1 and greater
 		/// </summary>
-		private static bool IsAlign(Version version)
+		public static bool IsAlign(Version version)
 		{
 			return version.IsGreaterEqual(2017);
 		}
 
-		private static int GetSerializedVersion(Version version)
+		public static int GetSerializedVersion(Version version)
 		{
 			if (Config.IsExportTopmostSerializedVersion)
 			{
@@ -338,7 +338,7 @@ namespace UtinyRipper.Classes
 			return node;
 		}
 
-		private void ExportGenericData(IExportContainer container, YAMLMappingNode node)
+		public void ExportGenericData(IExportContainer container, YAMLMappingNode node)
 		{
 			IReadOnlyDictionary<uint, string> tos = FindTOS();
 			/*if(tos == null)
@@ -351,7 +351,7 @@ namespace UtinyRipper.Classes
 		}
 
 #warning TODO: it's too complicated and unintuitive. need to simplify
-		private void ExportGenericData(IExportContainer container, YAMLMappingNode node, IReadOnlyDictionary<uint, string> tos)
+		public void ExportGenericData(IExportContainer container, YAMLMappingNode node, IReadOnlyDictionary<uint, string> tos)
 		{
 			StreamedClip streamedClip = MuscleClip.Clip.StreamedClip;
 			DenseClip denseClip = MuscleClip.Clip.DenseClip;
@@ -586,7 +586,7 @@ namespace UtinyRipper.Classes
 			node.Add("m_FloatCurves", floats.Values.ExportYAML(container));
 		}
 
-		/*private void ExportEmptyGenericData(YAMLMappingNode node)
+		/*public void ExportEmptyGenericData(YAMLMappingNode node)
 		{
 			node.Add("m_RotationCurves", YAMLMappingNode.Empty);
 			node.Add("m_CompressedRotationCurves", YAMLMappingNode.Empty);
@@ -596,7 +596,7 @@ namespace UtinyRipper.Classes
 			node.Add("m_FloatCurves", YAMLMappingNode.Empty);
 		}*/
 
-		private IReadOnlyDictionary<uint, string> FindTOS()
+		public IReadOnlyDictionary<uint, string> FindTOS()
 		{
 			Avatar avatar = FindAvatar();
 			if(avatar == null)
@@ -612,7 +612,7 @@ namespace UtinyRipper.Classes
 			return new Dictionary<uint, string>() { { 0, string.Empty } };
 		}
 
-		private Avatar FindAvatar()
+		public Avatar FindAvatar()
 		{
 			foreach (ISerializedFile file in File.Collection.Files)
 			{
@@ -657,7 +657,7 @@ namespace UtinyRipper.Classes
 		}
 
 #warning what about humanoid?
-		private bool IsExportGenericData(Version version)
+		public bool IsExportGenericData(Version version)
 		{
 			if (IsReadAnimationType(version) && AnimationType == AnimationType.Mecanim)
 			{
@@ -677,10 +677,10 @@ namespace UtinyRipper.Classes
 
 		public IReadOnlyDictionary<int, PPtr<BaseAnimationTrack>> ClassIDToTrack => m_classIDToTrack;
 		public IReadOnlyList<ChildTrack> ChildTracks => m_childTracks;
-		public AnimationType AnimationType { get; private set; }
-		public bool Legacy { get; private set; }
-		public bool Compressed { get; private set; }
-		public bool UseHightQualityCurve { get; private set; }
+		public AnimationType AnimationType { get; set; }
+		public bool Legacy { get; set; }
+		public bool Compressed { get; set; }
+		public bool UseHightQualityCurve { get; set; }
 		public IReadOnlyList<QuaternionCurve> RotationCurves => m_rotationCurves;
 		public IReadOnlyList<CompressedAnimationCurve> CompressedRotationCurves => m_compressedRotationCurves;
 		public IReadOnlyList<Vector3Curve> EulerCurves => m_eulerCurves;
@@ -688,24 +688,24 @@ namespace UtinyRipper.Classes
 		public IReadOnlyList<Vector3Curve> ScaleCurves => m_scaleCurves;
 		public IReadOnlyList<FloatCurve> FloatCurves => m_floatCurves;
 		public IReadOnlyList<PPtrCurve> PPtrCurves => m_PPtrCurves;
-		public float SampleRate { get; private set; }
-		public WrapMode WrapMode { get; private set; }
-		public uint MuscleClipSize { get; private set; }
+		public float SampleRate { get; set; }
+		public WrapMode WrapMode { get; set; }
+		public uint MuscleClipSize { get; set; }
 		public IReadOnlyList<AnimationEvent> Events => m_events;
 				
 		public AABB Bounds;
 		public ClipMuscleConstant MuscleClip;
 		public AnimationClipBindingConstant ClipBindingConstant;
 
-		private Dictionary<int, PPtr<BaseAnimationTrack>> m_classIDToTrack;
-		private ChildTrack[] m_childTracks;
-		private QuaternionCurve[] m_rotationCurves;
-		private CompressedAnimationCurve[] m_compressedRotationCurves;
-		private Vector3Curve[] m_eulerCurves;
-		private Vector3Curve[] m_positionCurves;
-		private Vector3Curve[] m_scaleCurves;
-		private FloatCurve[] m_floatCurves;
-		private PPtrCurve[] m_PPtrCurves;
-		private AnimationEvent[] m_events;
+		public Dictionary<int, PPtr<BaseAnimationTrack>> m_classIDToTrack;
+		public ChildTrack[] m_childTracks;
+		public QuaternionCurve[] m_rotationCurves;
+		public CompressedAnimationCurve[] m_compressedRotationCurves;
+		public Vector3Curve[] m_eulerCurves;
+		public Vector3Curve[] m_positionCurves;
+		public Vector3Curve[] m_scaleCurves;
+		public FloatCurve[] m_floatCurves;
+		public PPtrCurve[] m_PPtrCurves;
+		public AnimationEvent[] m_events;
 	}
 }

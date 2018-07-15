@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace UtinyRipper
 {
-	internal abstract class FileData<T> : IDisposable
+	public abstract class FileData<T> : IDisposable
 		where T: FileEntry
 	{
 		protected FileData(Stream stream, bool isClosable)

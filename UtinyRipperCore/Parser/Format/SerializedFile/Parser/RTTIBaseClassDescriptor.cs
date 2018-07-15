@@ -2,7 +2,7 @@
 
 namespace UtinyRipper.SerializedFiles
 {
-	internal sealed class RTTIBaseClassDescriptor : ISerializedFileReadable
+	public sealed class RTTIBaseClassDescriptor : ISerializedFileReadable
 	{
 		public RTTIBaseClassDescriptor(bool isSerializeTypeTrees)
 		{

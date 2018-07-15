@@ -2,7 +2,7 @@
 
 namespace UtinyRipper.SerializedFiles
 {
-	internal sealed class TypeTreeNode
+	public sealed class TypeTreeNode
 	{
 		public TypeTreeNode()
 		{

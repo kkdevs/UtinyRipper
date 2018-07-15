@@ -37,6 +37,6 @@ namespace UtinyRipper.Classes
 
 		public AvatarConstant AvatarConstant;
 
-		private readonly Dictionary<uint, string> m_TOS = new Dictionary<uint, string>();
+		public readonly Dictionary<uint, string> m_TOS = new Dictionary<uint, string>();
 	}
 }

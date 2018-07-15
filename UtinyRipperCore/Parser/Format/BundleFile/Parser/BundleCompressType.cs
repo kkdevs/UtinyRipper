@@ -1,6 +1,6 @@
 ﻿namespace UtinyRipper.BundleFiles
 {
-	internal enum BundleCompressType
+	public enum BundleCompressType
 	{
 		None = 0,
 		LZMA = 1,

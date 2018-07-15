@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtinyRipperCore", "UtinyRip
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtinyRipper", "UtinyRipper\UtinyRipper.csproj", "{1EC7FAF7-5D39-4868-A06F-C93018CD134F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimUtil", "AnimUtil\AnimUtil.csproj", "{EEFB1729-D1CF-4F14-A6E3-E98D9AF54CCF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,18 @@ Global
 		{1EC7FAF7-5D39-4868-A06F-C93018CD134F}.Release|x64.Build.0 = Release|x64
 		{1EC7FAF7-5D39-4868-A06F-C93018CD134F}.Release|x86.ActiveCfg = Release|x86
 		{1EC7FAF7-5D39-4868-A06F-C93018CD134F}.Release|x86.Build.0 = Release|x86
+		{EEFB1729-D1CF-4F14-A6E3-E98D9AF54CCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEFB1729-D1CF-4F14-A6E3-E98D9AF54CCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEFB1729-D1CF-4F14-A6E3-E98D9AF54CCF}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{EEFB1729-D1CF-4F14-A6E3-E98D9AF54CCF}.Debug|x64.Build.0 = Debug|Any CPU
+		{EEFB1729-D1CF-4F14-A6E3-E98D9AF54CCF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EEFB1729-D1CF-4F14-A6E3-E98D9AF54CCF}.Debug|x86.Build.0 = Debug|Any CPU
+		{EEFB1729-D1CF-4F14-A6E3-E98D9AF54CCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEFB1729-D1CF-4F14-A6E3-E98D9AF54CCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEFB1729-D1CF-4F14-A6E3-E98D9AF54CCF}.Release|x64.ActiveCfg = Release|Any CPU
+		{EEFB1729-D1CF-4F14-A6E3-E98D9AF54CCF}.Release|x64.Build.0 = Release|Any CPU
+		{EEFB1729-D1CF-4F14-A6E3-E98D9AF54CCF}.Release|x86.ActiveCfg = Release|Any CPU
+		{EEFB1729-D1CF-4F14-A6E3-E98D9AF54CCF}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

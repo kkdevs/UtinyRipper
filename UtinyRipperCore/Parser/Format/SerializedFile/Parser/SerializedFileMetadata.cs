@@ -2,7 +2,7 @@
 
 namespace UtinyRipper.SerializedFiles
 {
-	internal class SerializedFileMetadata : ISerializedFileReadable
+	public class SerializedFileMetadata : ISerializedFileReadable
 	{
 		public SerializedFileMetadata(string name)
 		{

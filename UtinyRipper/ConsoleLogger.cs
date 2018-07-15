@@ -6,8 +6,8 @@ namespace UtinyRipper
 	{
 		public ConsoleLogger()
 		{
-			Console.WindowWidth = (int)(Console.LargestWindowWidth * 0.8f);
-			Console.BufferHeight = 2000;
+			//Console.WindowWidth = (int)(Console.LargestWindowWidth * 0.8f);
+			//Console.BufferHeight = 2000;
 		}
 
 		public void Log(LogType type, LogCategory category, string message)
@@ -19,7 +19,7 @@ namespace UtinyRipper
 			}
 #endif
 
-			ConsoleColor backColor = Console.BackgroundColor;
+			/*ConsoleColor backColor = Console.BackgroundColor;
 			ConsoleColor foreColor = Console.ForegroundColor;
 
 			switch (type)
@@ -39,12 +39,12 @@ namespace UtinyRipper
 				case LogType.Error:
 					Console.ForegroundColor = ConsoleColor.DarkRed;
 					break;
-			}
+			}*/
 
 			Console.WriteLine($"{category}: {message}");
 
-			Console.BackgroundColor = backColor;
-			Console.ForegroundColor = foreColor;
+			//Console.BackgroundColor = backColor;
+			//Console.ForegroundColor = foreColor;
 		}
 
 		public static ConsoleLogger Instance { get; } = new ConsoleLogger();

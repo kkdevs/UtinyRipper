@@ -3,7 +3,7 @@
 namespace UtinyRipper.BundleFiles
 {
 	[Flags]
-	internal enum BundleFlag
+	public enum BundleFlag
 	{
 		CompressionMask		= 0x3F,
 
@@ -11,7 +11,7 @@ namespace UtinyRipper.BundleFiles
 		MetadataAtTheEnd	= 0x80,
 	}
 
-	internal static class BundleFlagExtensions
+	public static class BundleFlagExtensions
 	{
 		public static BundleCompressType GetCompression(this BundleFlag _this)
 		{

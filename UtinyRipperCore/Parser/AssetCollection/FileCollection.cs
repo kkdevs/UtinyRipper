@@ -281,7 +281,7 @@ namespace UtinyRipper
 		public AssetFactory AssetFactory { get; } = new AssetFactory();
 		public IReadOnlyList<ISerializedFile> Files => m_files;
 
-		private readonly List<SerializedFile> m_files = new List<SerializedFile>();
-		private readonly List<ResourcesFile> m_resources = new List<ResourcesFile>();
+		public readonly List<SerializedFile> m_files = new List<SerializedFile>();
+		public readonly List<ResourcesFile> m_resources = new List<ResourcesFile>();
 	}
 }

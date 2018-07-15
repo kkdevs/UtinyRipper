@@ -12,7 +12,7 @@ namespace UtinyRipper.SerializedFiles
 	/// Serialized files contain binary serialized objects and optional run-time type information.
 	/// They have file name extensions like .asset, .assets, .sharedAssets, .unity3d, but may also have no extension at all
 	/// </summary>
-	internal class SerializedFile : ISerializedFile
+	public class SerializedFile : ISerializedFile
 	{
 		public SerializedFile(IFileCollection collection, string filePath, string fileName)
 		{
@@ -353,7 +353,7 @@ namespace UtinyRipper.SerializedFiles
 		
 		public bool IsScene { get; private set; }
 
-		public IReadOnlyCollection<Object> Assets => m_assets.Values;
+		public ICollection<Object> Assets => m_assets.Values;
 		public IFileCollection Collection { get; }
 		public IReadOnlyList<FileIdentifier> Dependencies => Metadata.Dependencies;
 

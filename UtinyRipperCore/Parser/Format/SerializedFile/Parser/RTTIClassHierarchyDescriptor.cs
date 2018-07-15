@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace UtinyRipper.SerializedFiles
 {
-	internal sealed class RTTIClassHierarchyDescriptor
+	public sealed class RTTIClassHierarchyDescriptor
 	{
 		public RTTIClassHierarchyDescriptor(string name)
 		{
@@ -88,6 +88,6 @@ namespace UtinyRipper.SerializedFiles
 		
 		private string Name { get; }
 
-		private RTTIBaseClassDescriptor[] m_types;
+		public RTTIBaseClassDescriptor[] m_types;
 	}
 }

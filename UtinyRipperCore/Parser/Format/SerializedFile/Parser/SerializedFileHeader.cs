@@ -5,7 +5,7 @@ namespace UtinyRipper.SerializedFiles
 	/// <summary>
 	/// The file header is found at the beginning of an asset file. The header is always using big endian byte order.
 	/// </summary>
-	internal class SerializedFileHeader
+	public class SerializedFileHeader
 	{
 		public SerializedFileHeader(string name)
 		{

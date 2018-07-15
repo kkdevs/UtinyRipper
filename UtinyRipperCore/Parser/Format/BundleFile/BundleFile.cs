@@ -6,7 +6,7 @@ using UtinyRipper.SerializedFiles;
 
 namespace UtinyRipper.BundleFiles
 {
-	internal class BundleFile : IDisposable
+	public class BundleFile : IDisposable
 	{
 		public BundleFile(FileCollection fileCollection, string filePath, Action<string> requestDependencyCallback)
 		{

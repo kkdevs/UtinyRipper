@@ -7,7 +7,7 @@ namespace UtinyRipper.BundleFiles
 	/// <summary>
 	/// Metadata about bundle's block or chunk
 	/// </summary>
-	internal class BundleMetadata : FileData<BundleFileEntry>
+	public class BundleMetadata : FileData<BundleFileEntry>
 	{
 		public BundleMetadata(Stream stream, string filePath, bool isClosable) :
 			base(stream, isClosable)

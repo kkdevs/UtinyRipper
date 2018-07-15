@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace UtinyRipper.SerializedFiles
 {
-	internal sealed class TypeTree : ISerializedFileReadable
+	public class TypeTree : ISerializedFileReadable
 	{
 		/// <summary>
 		/// 5.0.0a1 and greater
@@ -62,6 +62,6 @@ namespace UtinyRipper.SerializedFiles
 
 		public IReadOnlyList<TypeTreeNode> Nodes => m_nodes;
 
-		private TypeTreeNode[] m_nodes;
+		public TypeTreeNode[] m_nodes;
 	}
 }
